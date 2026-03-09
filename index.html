@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom & Grace Florals | Portofolio Florist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap');
+
+        :root {
+            --primary-rose: #e4a199;
+            --soft-pink: #fdf2f0;
+            --deep-green: #2d4635;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                        url('https://images.unsplash.com/photo-1519225495810-75123328570b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .flower-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary-rose);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .btn-rose {
+            background-color: var(--primary-rose);
+            transition: all 0.3s ease;
+        }
+
+        .btn-rose:hover {
+            background-color: #d18b83;
+            transform: translateY(-2px);
+        }
+
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navigasi -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-serif text-2xl font-bold text-rose-400">Bloom & Grace</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-rose-400">Beranda</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-rose-400">Tentang</a>
+                    <a href="#gallery" class="nav-link text-gray-700 hover:text-rose-400">Galeri</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-rose-400">Layanan</a>
+                    <a href="#contact" class="btn-rose text-white px-6 py-2 rounded-full font-medium">Hubungi Kami</a>
+                </div>
+
+                <!-- Mobile Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 p-4 space-y-4 shadow-lg">
+            <a href="#home" class="block text-gray-700 px-4 py-2">Beranda</a>
+            <a href="#about" class="block text-gray-700 px-4 py-2">Tentang</a>
+            <a href="#gallery" class="block text-gray-700 px-4 py-2">Galeri</a>
+            <a href="#services" class="block text-gray-700 px-4 py-2">Layanan</a>
+            <a href="#contact" class="block text-rose-400 font-bold px-4 py-2">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center pt-20 px-4">
+        <div class="max-w-7xl mx-auto w-full text-center">
+            <span class="text-rose-500 font-medium tracking-widest uppercase text-sm block mb-4">Seni Merangkai Bunga</span>
+            <h1 class="text-4xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                Keindahan Abadi dalam <br><span class="italic text-rose-400 font-serif">Setiap Kelopak</span>
+            </h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                Kami menghadirkan rangkaian bunga pilihan untuk merayakan setiap momen berharga Anda dengan sentuhan elegan dan penuh cinta.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#gallery" class="btn-rose text-white px-10 py-4 rounded-full text-lg shadow-lg">Lihat Katalog</a>
+                <a href="#contact" class="bg-white border-2 border-rose-300 text-rose-400 px-10 py-4 rounded-full text-lg hover:bg-rose-50 transition-colors">Konsultasi Gratis</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-rose-50/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1596073413202-4b72baac7bc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Florist sedang bekerja" class="w-full h-[500px] object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-xl hidden lg:block">
+                        <p class="font-serif italic text-rose-400 text-2xl">Since 2015</p>
+                        <p class="text-sm text-gray-500">Menciptakan senyuman</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Membawa Alam ke <br>Ruang Hidup Anda</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Bloom & Grace Florals berawal dari sebuah studio kecil di sudut kota. Kami percaya bahwa bunga adalah bahasa universal untuk menyampaikan apa yang tidak bisa diucapkan oleh kata-kata.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center text-rose-500">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <span class="font-medium">100% Bunga Segar Pilihan</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center text-rose-500">
+                                <i class="fa-solid fa-truck"></i>
+                            </div>
+                            <span class="font-medium">Pengiriman di Hari yang Sama</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center text-rose-500">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <span class="font-medium">Desain Kustom sesuai Request</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4">Koleksi Favorit</h2>
+            <p class="text-gray-500 italic">Pilihan terbaik untuk setiap perasaan Anda</p>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Item 1 -->
+            <div class="flower-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100">
+                <div class="overflow-hidden h-80">
+                    <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Buket Mawar Pastel" class="w-full h-full object-cover transition-transform duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Pastel Elegance</h3>
+                    <p class="text-gray-500 text-sm mb-4">Campuran mawar premium dan baby's breath untuk kesan lembut.</p>
+                    <p class="text-rose-400 font-bold">Rp 450.000</p>
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="flower-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100">
+                <div class="overflow-hidden h-80">
+                    <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Mawar Merah" class="w-full h-full object-cover transition-transform duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Midnight Romance</h3>
+                    <p class="text-gray-500 text-sm mb-4">Simbol cinta abadi dengan 12 tangkai mawar merah impor.</p>
+                    <p class="text-rose-400 font-bold">Rp 600.000</p>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="flower-card group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100">
+                <div class="overflow-hidden h-80">
+                    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bunga Matahari" class="w-full h-full object-cover transition-transform duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Golden Sunshine</h3>
+                    <p class="text-gray-500 text-sm mb-4">Kecerahan bunga matahari untuk menyemangati hari seseorang.</p>
+                    <p class="text-rose-400 font-bold">Rp 350.000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 font-serif">Layanan Kami</h2>
+                <div class="w-20 h-1 bg-rose-400 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div class="p-8 rounded-2xl border border-gray-800 hover:border-rose-400/50 transition-all">
+                    <i class="fa-solid fa-rings-wedding text-4xl text-rose-400 mb-6 block"></i>
+                    <h3 class="text-2xl font-bold mb-4">Wedding Decor</h3>
+                    <p class="text-gray-400">Wujudkan pernikahan impian dengan dekorasi bunga yang magis dan artistik.</p>
+                </div>
+                <div class="p-8 rounded-2xl border border-gray-800 hover:border-rose-400/50 transition-all">
+                    <i class="fa-solid fa-gift text-4xl text-rose-400 mb-6 block"></i>
+                    <h3 class="text-2xl font-bold mb-4">Gift Bouquet</h3>
+                    <p class="text-gray-400">Buket bunga cantik untuk ulang tahun, wisuda, atau hari spesial lainnya.</p>
+                </div>
+                <div class="p-8 rounded-2xl border border-gray-800 hover:border-rose-400/50 transition-all">
+                    <i class="fa-solid fa-building text-4xl text-rose-400 mb-6 block"></i>
+                    <h3 class="text-2xl font-bold mb-4">Corporate Events</h3>
+                    <p class="text-gray-400">Percantik lobi kantor atau acara bisnis Anda dengan rangkaian bunga segar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-rose-50 rounded-[3rem] overflow-hidden shadow-xl flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 p-12 lg:p-20">
+                    <h2 class="text-4xl font-bold mb-6 font-serif">Ayo Mulai Sesuatu yang Indah</h2>
+                    <p class="text-gray-600 mb-8">Punya ide kustom atau ingin bertanya tentang layanan kami? Tim florist kami siap membantu Anda.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-location-dot text-rose-400 text-xl w-6"></i>
+                            <span>Jl. Mawar Indah No. 123, Jakarta Selatan</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-phone text-rose-400 text-xl w-6"></i>
+                            <span>+62 812-3456-7890</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-envelope text-rose-400 text-xl w-6"></i>
+                            <span>halo@bloomgrace.id</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 mt-12 text-2xl">
+                        <a href="#" class="text-gray-400 hover:text-rose-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-rose-400 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-rose-400 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 bg-white p-12 lg:p-20">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Nama Lengkap</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-200 focus:border-rose-400 outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-200 focus:border-rose-400 outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Pesan</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-200 focus:border-rose-400 outline-none transition-all"></textarea>
+                        </div>
+                        <button type="submit" class="w-full btn-rose text-white py-4 rounded-xl font-bold shadow-lg">Kirim Pesan</button>
+                    </form>
+                    <div id="successMessage" class="hidden mt-4 p-4 bg-green-50 text-green-700 rounded-xl text-center">
+                        Pesan Anda telah terkirim! Kami akan menghubungi Anda segera.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="font-serif text-2xl font-bold text-rose-400 mb-4 block">Bloom & Grace</span>
+            <p class="text-gray-400 text-sm">© 2024 Bloom & Grace Florals. Dibuat dengan cinta untuk bunga.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Submit Simulation
+        const form = document.getElementById('contactForm');
+        const successMsg = document.getElementById('successMessage');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            form.classList.add('hidden');
+            successMsg.classList.remove('hidden');
+            
+            setTimeout(() => {
+                form.reset();
+                form.classList.remove('hidden');
+                successMsg.classList.add('hidden');
+            }, 5000);
+        });
+
+        // Simple scroll animation for navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
+
